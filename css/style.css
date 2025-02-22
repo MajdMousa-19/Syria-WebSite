@@ -438,6 +438,7 @@ transition: 0.2s;
 }
 .services-list .service-block .ico {
     font-size: 38px;
+    float: right;
   }
 .services-list .service-block .text-block {
     margin-right: 58px;
