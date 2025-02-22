@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- css link -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- bootstrap link -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Lateef:wght@200;300;400;500;600;700;800&family=Ruwudu:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body style="background-color: #CAE0BC;">
+  <nav>
+    <nav class="navbar navbar-expand-lg nav" id="nav">
+      <div class="container-fluid nav">
+        <img loading="lazy" draggable="false" src="img/logo.png" alt="" height="56px" style="margin-left: 10px;">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center mx-auto" id="nvv">
+            <li class="nav-item ">
+              <a class="nav-link" aria-current="page" href="#nav">الرئيسية</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#galary">الصور</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                المحافظات
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#Damascus">Damascus</a></li>
+                <li><a class="dropdown-item" href="#Aleppo">Aleppo</a></li>
+                <li><a class="dropdown-item" href="#Homs">Homs</a></li>
+                <li><a class="dropdown-item" href="#Latakia">Latakia</a></li>
+                <li><a class="dropdown-item" href="#Hama">Hama</a></li>
+                <li><a class="dropdown-item" href="#Raqqa">Raqqa</a></li>
+                <li><a class="dropdown-item" href="#Deir-ez-Zor">Deir ez-Zor</a></li>
+                <li><a class="dropdown-item" href="#Al-Hasakah">Al-Hasakah</a></li>
+                <li><a class="dropdown-item" href="#Tartusr">Tartusr</a></li>
+                <li><a class="dropdown-item" href="#Idlib">Idlib</a></li>
+                <li><a class="dropdown-item" href="#Daraa">Daraa</a></li>
+                <li><a class="dropdown-item" href="#As-Suwayda">As-Suwayda</a></li>
+                <li><a class="dropdown-item" href="#Quneitra">Quneitra</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#iinfo">معلومات</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#maalm">معالم سوريا</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">حول</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search" >
+            <button class="btn btn-outline-success btnbtn1 me-2" type="submit" style="border:1.5px solid #780C28 ; transition: 0.2s; color: #780C28; font-weight: bold; padding: 10px;">بحث</button>
+            <input class="form-control " type="search" placeholder="بحث" aria-label="Search" style="border-color: #780C28; background-color:#CAE0BC ; color: #780C28; font-weight: bold; padding: 10px; text-align: right;">
+
+          </form>
+          <!-- Vertically centered modal -->
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btnbtn" data-bs-toggle="modal" data-bs-target="#exampleModal" style="border:1.5px solid #780C28 ; transition: 0.2s; color: #780C28; font-weight: bold; padding: 10px;">          
+            تسجيل الدخول
+          </button>
+          <!-- <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: yellowgreen;">          
+            Sign Up
+          </button> -->
+
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content" style="background-color:  #EAFAEA; color: #780C28;">
+                <div class="modal-header">          
+        <h1 class="modal-title fs-5" id="exampleModalLabel">تسجيل الدخول</h1>
+        <button type="button" class="btn-close bg-dark" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form action="/action_page.php">
+                    <div class="mb-3 mt-3">
+                      <label for="email" class="form-label" style="color: #780C28;">Email:</label>
+                      <input type="email" class="form-control" id="email" placeholder="Enter Your Email" name="email">
+                    </div>
+                    <div class="mb-3">
+                      <label for="pwd" class="form-label" style="color: #780C28;">Password:</label>
+                      <input type="password" class="form-control" id="pwd" placeholder="Enter Your Password" name="pswd">
+                    </div>
+                    <div class="form-check mb-3">
+                      <label class="form-check-label" style="color: #6E8E59;">
+                        <input class="form-check-input" type="checkbox" name="remember" > Remember me
+                      </label>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">الغاء</button>
+        <button type="button" class="btn" style="background-color: #780C28; color: #EAFAEA;">تسجيل</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </nav>
+  </nav>
+  <!-- Nav End -->
+
+  <!-- Start Carousel -->
+  <!-- Carousel -->
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+  <!-- Indicators/dots -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+  </div>
+  
+  <!-- The slideshow/carousel -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img loading="lazy" draggable="false" src="img/Sunset_clouds_in_Damascus.jpg" alt="Damascus" class="d-block" style="width:100%">
+      <div class="carousel-caption">
+        <h3>دمشق</h3>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img loading="lazy" draggable="false" src="img/1280px-وادي_قنديل_(wadi_kandel_).jpg" alt="Chicago" class="d-block" style="width:100%">
+      <div class="carousel-caption">
+        <h3>اللاذقية</h3>
+      </div> 
+    </div>
+    <div class="carousel-item">
+      <img loading="lazy" draggable="false" src="img/Noria_and_houses_in_Hama,_Syria.JPG" alt="New York" class="d-block" style="width:100%">
+      <div class="carousel-caption">
+        <h3>حماه</h3>
+      </div>  
+    </div>
+  </div>
+  
+  <!-- Left and right controls/icons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+  <!-- End Carousel -->
+
+  <!-- Start Jumbotron -->
+  <div class="Jumbotron">
+    <div class="container mt-3 text-center">
+      <div class="mt-2 p-5 bg-dark text-white rounded">
+        <h1>سورية</h1> 
+        <p>الجمهورية العربية السورية هي دولة عربية مؤلفة من 14 محافظة عاصمتها وأكبر مدنها هي دمشق تقع ضمن منطقة الشرق الأوسط في غربي آسيا يحدها شمالاََ تركيا وشرقاََ العراق وجنوبا الأردن وغرباََ فلسطين ولبنان والبحر المتوسط</p> 
+        <div class="card-contain">
+          <div class="cardx" style=" width: 100%;">
+            <div class="front">
+              <img loading="lazy" draggable="false" src="img/Flag_of_the_Syrian_revolution.svg.png" alt="" width="100%" height="100%" style="border-radius: 8px;">
+            </div>
+            <div class="back">
+              <h3>سورية حرة</h3>
+            </div>
+          </div>
+        </div>
+
+            </div>
+    </div>
+  </div>
+
+  <!-- End Jumbotron -->
+
+  <!-- Start gallery -->
+
+  <div class="container gray-bg" style="margin-top: 20px; border-radius: 20px;" id="galary">
+        <h2 class="text-center title" style="padding: 30px; font-size: 50px;">الصور</h2>
+    <!-- Gallery -->
+<div class="row">
+  <div class="col-11 col-lg-4 col-md-12 mb-4 mb-lg-0">
+    <img
+      src="img/11.jpg" loading="lazy" draggable="false"
+      class="w-100 shadow-1-strong rounded mb-4"
+    />
+
+    <img
+      src="img/44.jpg" loading="lazy" draggable="false"
+      class="w-100 shadow-1-strong rounded mb-4"
+      style="height: 590px;"
+    />
+  </div>
+
+  <div class="col-11 col-lg-4 mb-4 mb-lg-0">
+    <img
+      src="img/33.jpg" loading="lazy" draggable="false"
+      class="w-100 shadow-1-strong rounded mb-4"
+    />
+
+    <img
+      src="img/55.jpg" loading="lazy" draggable="false"
+      class="w-100 shadow-1-strong rounded mb-4"
+    />
+  </div>
+
+  <div class="col-11 col-lg-4 mb-4 mb-lg-0">
+    <img
+      src="img/22.jpg" loading="lazy" draggable="false"
+      class="w-100 shadow-1-strong rounded mb-4"
+    />
+
+    <img 
+      src="img/66.jpg" loading="lazy" draggable="false"
+      class="w-100 shadow-1-strong rounded mb-4"
+      style="height: 590px;"
+    />
+  </div>
+</div>
+<!-- Gallery -->
+  </div>
+
+  <!-- End gallery -->
+  <!-- Start Card -->
+  <div class="container" id="dam">
+    <h2 class="text-center title" >المحافظات السورية</h2>
+      <div class="row">
+        <div class="card col-11 col-md-3 p-0" id="Damascus">
+          <img loading="lazy" draggable="false" src="img/Damascus.jpg" class="card-img-top width-100 cardscale" alt="..." height="50%">
+          <div class="card-body">
+            <h5 class="card-title">Damascus</h5>
+            <p class="card-text">هي إحدى المحافظات السورية الأربع عشرة، وتتألف فقط من مدينة دمشق، عاصمة الجمهورية العربية السورية التي يعتبرها البعض أقدم مدينة مأهولة في التاريخ، بالإضافة إلى ضاحية مخيم اليرموك. تحيط محافظة ريف دمشق بمحافظة دمشق من جميع الجوانب. جنوباً محافظات القنيطرة – درعا – السويداء <br> ومن الشمال الشرقي: محافظة حمص</p>
+            <!-- <a href="#" class="btn btn-primary">Read More!</a> -->
+            <p class="d-inline-flex gap-1">
+          </div>
+        </div>
+        <div class="card col-11 col-md-3 p-0" id="Aleppo">
+          <img loading="lazy" draggable="false" src="img/Aleppo_view2 (1).jpg" class="card-img-top width-100 cardscale" alt="..." height="50%">
+          <div class="card-body">
+            <h5 class="card-title">Aleppo</h5>
+            <p class="card-text">تعد محافظة حلب العاصمة الاقتصادية لسوريا، تقع شمالي سوريا وهي متاخمة لحدود جنوب تركيا، وتعد عاصمتها مدينة حلب أكثر مدن البلاد اكتظاظا بالسكان، ومن أقدم المدن المأهولة في التاريخ، إذ وقعت على مفترق طرق تجارية متعددة منذ الألفية الثانية قبل الميلاد، فخضعت لسيطرة حضارات مختلفة بداية من الحثيين ثم الآشوريين والعرب فالمغول</p>
+            <p class="d-inline-flex gap-1">
+          </div>
+        </div>
+        <div class="card col-11 col-md-3 p-0" id="Homs">
+          <img loading="lazy" draggable="false" src="img/Homs_3079.jpg" class="card-img-top width-100 cardscale" alt="..." height="50%">
+          <div class="card-body">
+            <h5 class="card-title">Homs</h5>
+            <p class="card-text">محافظة حمص أكبر محافظات سوريا مساحة. تقع في وسط سوريا وتقسم البلد إلى شطرين حيث تمتد من حدود العراق إلى لبنان. مركزها وأكبر مدنها مدينة حمص وهي أهم المدن وسط سوريا. يمر فيها نهر العاصي الذي يعدّ مورداً طبيعياً هاماً لمدن وقرى وبلدات هذه المحافظة متنوعة التضاريس حيث فيها السهول والجبال والوديان والبادية</p>
+            <p class="d-inline-flex gap-1">
+
+                    </div>
+        </div>
+      </div>
+      <div class="row">
+      <div class="card col-11 col-md-3 p-0" id="Latakia">
+        <img loading="lazy" draggable="false" src="img/1280px-وادي_قنديل_(wadi_kandel_).jpg" class="card-img-top width-100 cardscale" alt="..." height="50%">
+        <div class="card-body"> 
+          <h5 class="card-title">Lattakia</h5>
+          <p class="card-text">محافظة اللاذقية محافظة سورية تقع شمال غرب سوريا تطل على البحر الأبيض المتوسط وفيها ميناء كبير ومعظم أراضيها تغطيها الغابات والبساتين ويبلغ مساحة محافظة اللاذقية 2297 كم ويبلغ عدد قرى محافظة 500 قرية و لها حدود مع تركيا ومع محافظة إدلب و محافظة حماة ومحافظة طرطوس، والمحافظة خليط من عدة أعراق من العرب والتركمان والأكراد
+          </p>
+          <p class="d-inline-flex gap-1">
+      </div>
+      </div>
+      <div class="card col-11 col-md-3 p-0" id="Hama">
+        <img loading="lazy" draggable="false" src="img/Hama.jpg" class="card-img-top width-100 cardscale" alt="..." height="50%">
+        <div class="card-body">
+          <h5 class="card-title">Hama</h5>
+          <p class="card-text">هي إحدى المحافظات الأربعة عشر المكونة للجمهورية العربية السورية، تقع في الجزء الأوسط من سورية، يحدها من الشمال محافظتي إدلب وحلب، ومن الشمال الشرقي محافظة الرقة، ومن الشرق والجنوب محافظة حمص، ومن الغرب محافظتي اللاذقية وطرطوس. تمتد أراضيها من قلب البادية السورية شرقاً إلى ذرى الجبال الساحلية غرباً
+          </p>
+          <p class="d-inline-flex gap-1">
+        </div>
+      </div>
+      <div class="card col-11 col-md-3 p-0" id="Raqqa">
+        <img loading="lazy" draggable="false" src="img/raqqa.jpg" class="card-img-top width-100 cardscale" alt="..." height="50%">
+        <div class="card-body">
+          <h5 class="card-title">Raqqa</h5>
+          <p class="card-text">هي محافظة في شمال وسط سوريا على الضفة الشمالية لنهر الفرات، على بعد 200 كم شرق مدينة حلب. منذ أواسط السبعينيات يعتمد اقتصاد الرقة على سد الفرات وعلى الزراعة وعلى الحقول النفطية المجاورة. في الرقة متحف تاريخي صغير يسمى متحف الرقة، وشارع شعبي هو شارع القوتلي (السوق الشرقي) الأكثر شعبية في المدينة</p>
+          <p class="d-inline-flex gap-1">
+        </div>
+      </div>
+  <div class="container">
+      <div class="row">
+        <div class="card col-11 col-md-3 p-0" id="Deir-ez-Zor">
+          <img loading="lazy" draggable="false" src="img/Deir_az_Zor.jpg" loading="" class="card-img-top width-100 cardscale" alt="..." height="50%">
+          <div class="card-body">
+            <h5 class="card-title">Deir ez-Zor</h5>
+            <p class="card-text">دير الزور وتعرف محليًا باسم الدير، مدينة سوريّة تعتبر أكبر مدن الشرق السوري قاطبةً، فضلًا عن كونها مركزًا إداريًا لمحافظة دير الزور كانت ومنذ العصر السلوقي بلدة صغيرة على نهر الفرات واستمرت في العصور اللاحقة كذلك حتى انتعشت إبان الحكم العثماني للبلاد مع تحولها إلى مركز تجاري على طريق القوافل القادمة من حلب نحو بغداد،</p>
+            <p class="d-inline-flex gap-1">
+          </div>
+        </div>
+        <div class="card col-11 col-md-3 p-0" id="Al-Hasakah">
+          <img loading="lazy" draggable="false" src="img/hasake.webp" class="card-img-top width-100 cardscale" alt="..." height="50%">
+          <div class="card-body">
+            <h5 class="card-title">Al-Hasakah</h5>
+            <p class="card-text">تقع محافظة الحسكة في الجزء الشمال الشرقي من سورية ، تحدها تركيا من الشمال والعراق من الشرق ومحافظة دير الزور من الجنوب و الرقة من الغرب . تبلغ مساحتها (23.33) ألف كم2، وتشكل نحو (12.6%) من إجمالي مساحة سورية ، وتعد الحسكة ثالث أكبر محافظة من حيث المساحة في القطر</p>
+            <p class="d-inline-flex gap-1">
+          </div>
+        </div>
+        <div class="card col-11 col-md-3 p-0" id="Tartusr">
+          <img loading="lazy" draggable="false" src="img/Tartus_sea_side_3458.jpg" class="card-img-top width-100 cardscale" alt="..." height="50%">
+          <div class="card-body">
+            <h5 class="card-title">Tartus</h5>
+            <p class="card-text">وهي ثاني أكبر مدينة ساحلية في سوريا (بعد اللاذقية)، وأكبر مدينة في محافظة طرطوس. تقع على خط طول 35.89 درجة وخط عرض 34.89 درجة وترتفع حوالي 20 متر عن سطح البحر. كانت طرطوس حتى سبعينيات القرن العشرين ضمن محافظة اللاذقية، ثم أصبحت محافظة منفصلة. يبلغ عدد السكان 458.327 نسمة (تقديرات عام 2023)</p>
+            <p class="d-inline-flex gap-1">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+      <div class="card col-11 col-md-3 p-0" id="Idlib">
+        <img loading="lazy" draggable="false" src="img/idlb.jpeg" class="card-img-top width-100 cardscale" alt="..." height="50%">
+        <div class="card-body">
+          <h5 class="card-title">Idlib</h5>
+          <p class="card-text">تقع في شمال غرب سورية على بعد 37 ميل جنوب غرب حلب يطلق عليها إدلب الخضراء لكثرة أشجار الزيتون فيها ، وتعتبر من المحافظات الحديثة المحدثة في أيام الجمهورية العربية المتحدة</p>
+          <p class="d-inline-flex gap-1">
+        </div>
+      </div>
+      <div class="card col-11 col-md-3 p-0" id="Daraa">
+        <img loading="lazy" draggable="false" src="img/daraa.jpg" class="card-img-top width-100 cardscale" alt="..." height="50%">
+        <div class="card-body">
+          <h5 class="card-title">Daraa</h5>
+          <p class="card-text">إحدى أهم المناطق السورية جغرافيا وتاريخيا. تقع جنوب البلاد ويحدها من الشمال محافظة ريف دمشق، ومن الغرب محافظة القنيطرة، ومن الجنوب المملكة الأردنية الهاشمية. وتعد مدينة درعا مركزها وأكبر مدنها، وكانت قديما مركزا لإقليم حوران، الذي امتد من جنوب سوريا إلى شمال الأردن</p>
+          <p class="d-inline-flex gap-1">
+        </div>
+      </div>
+      <div class="card col-11 col-md-3 p-0" id="As-Suwayda">
+        <img loading="lazy" draggable="false" src="img/sweda.jpg" class="card-img-top width-100  cardscale" alt="..." height="50%">
+        <div class="card-body">
+          <h5 class="card-title">As-Suwayda</h5>
+          <p class="card-text">واحدة من المحافظات السورية تقع في الجنوب الشرقي من دمشق وتحدها محافظة ريف دمشق من الشمال ومحافظة درعا من الغرب والبادية السورية والصفا من الشرق والأردن من الجنوب. تبلغ مساحتها /6550/كم² ويمتد طول المحافظة من الشمال إلى الجنوب /120/ كم ويبلغ عرضها من الشرق إلى الغرب /66/كم</p>
+          <p class="d-inline-flex gap-1">
+        </div>
+      </div>
+
+  <!-- End Card -->
+
+  <!-- Start Section -->
+  <section class="section about-section gray-bg" id="iinfo" style="margin-top: 20px; border-radius: 20px;">
+        <div class="container">
+            <div class="row align-items-center justify-content-around flex-row-reverse">
+            <div class="col-lg-6">
+                <div class="about-text">
+                  <h2 class="text-center title mt-0">معلومات عن سورية</h2>
+                    <p>سوريا، مهد الحضارات ومنبع الثقافات والادمغة النابغة ، مصدر الخيرات الوفيرة لتنوع تربتها وخصوبتها ، وعندما نقول مهد الحضارات اول ما يجول في خاطرنا أنه وجد فيها اول ابجدية في التاريخ الأبجدية الأوغاريتية قبل ما يقارب 1400 عام ميلادي
+                    </p>
+                    <p>وأما الكلام عن الخيرات فالخيرات كثيرة بسبب تنوع الاراضي الموجودة في سوريا مثل التربة الحمراء الغنية بأكاسيد الحديد والتي تصلح لعدة خضروات وفواكه منها: التين والزيتون والفستق الحلبي وتوجد هذه التربة في مناطق دير الزور و الجزيرة
+                      وايضا توجد التربة الرملية او الطينية الصالحة لزراعة الحمضيات التي توجد على الساحل السوري
+                    <div class="btn-bar">
+                        <button type="button" class="px-btn read" data-bs-toggle="modal" data-bs-target="#myModal" style="font-weight: bold;" >
+                          خريطة سورية
+                        </button>
+                      
+                      <!-- The Modal -->
+                      <div class="modal" id="myModal">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                      
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                              <img draggable="false" src="img/Screenshot 2025-02-20 160541.png" alt="" width="100%">
+                            </div>
+                      
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                              <button type="button" class="btn read" data-bs-dismiss="modal">الغاء</button>
+                            </div>
+                      
+                          </div>
+                        </div>
+                      </div>
+                        <!-- <a class="px-btn theme-t" href="#">Download CV</a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 text-center">
+                <div class="about-img">
+                    <img loading="lazy" draggable="false" src="img/Flag_of_the_Syrian_revolution.svg.png" style="background-color: #ebf4fa; width: 100%; border-radius: 15px;">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  <!-- End Section -->
+
+  <!-- Start News -->
+
+  <div class="container bootstrap snippets bootdey" id="maalm">
+    <section id="services" class="current">
+        <div class="services-top">
+            <div class="container bootstrap snippets bootdey">
+                <div class="row text-center">
+                    <div class="col-sm-12 col-md-12 col-md-12">
+                      <h2 class="text-center title mt-0" style="font-size: 50px;">أبرز المعالم في سورية</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-offset-1 col-sm-12 col-md-12 col-md-10">
+                        <div class="services-list">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-4 col-md-4">
+                                    <div class="service-block" style="visibility: visible;">
+                                        <div class="ico fa fa- highlight"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: #780C28;transform: ;msFilter:;"><path d="M8 22h1v-6.995c.006-.502.177-3.005 3-3.005s2.994 2.503 3 3v7h7v-2h-1V4h1V2H2v2h1v16H2v2h6zM19 4v2H5V4h14zM5 8h14v12h-2v-5c0-1.729-1.045-5-5-5s-5 3.271-5 5v5H5V8z"></path></svg></div>
+                                        <div class="text-block">
+                                            <div class="name">قلعة حلب</div>
+                                            <div class="info">حلب</div>
+                                            <div class="text">قصر محصن يعود إلى العصور الوسطى. تعدُّ قلعة حلب إحدى أقدم وأكبر القلاع في العالم، يعود استخدام التل الذي تتموضع عليه القلعة إلى الألفية الثالثة قبل الميلاد، واحتلتها فيما بعد العديد من الحضارات كالإغريق والبيزنطيين والمماليك والأيوبيين</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4 col-md-4">
+                                    <div class="service-block" style="visibility: visible;">
+                                      <div class="ico fa fa- highlight"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: #780C28;transform: ;msFilter:;"><path d="M21 8V6H3v14H2v2h6v-7c0-.163.046-4 4-4 3.821 0 3.993 3.602 4 4v7h6v-2h-1V8zM2 2h20v2H2z"></path></svg></div>
+                                      <div class="text-block">
+                                            <div class="name">قلعة الحصن</div>
+                                            <div class="info">حمص</div>
+                                            <div class="text">قلعة الحصن هي قلعة صليبية تقع في محافظة حمص في سوريا في وادي النصارى شمالي غرب سوريا إلى الجنوب من بلدة مشتى الحلو السياحيّة على تلة يصل ارتفاعها 650م وتبعد عن مدينة حمص 60كم تقريباً، وتعتبر القلعة واحدة من أهمّ القلاع والحصون في القرون الوسطى</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4 col-md-4">
+                                    <div class="service-block" style="visibility: visible;">
+                                      <div class="ico fa fa- highlight"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: #780C28;transform: ;msFilter:;"><path d="M8 22h1v-6.995c.006-.502.177-3.005 3-3.005s2.994 2.503 3 3v7h7v-2h-1V4h1V2H2v2h1v16H2v2h6zM19 4v2H5V4h14zM5 8h14v12h-2v-5c0-1.729-1.045-5-5-5s-5 3.271-5 5v5H5V8z"></path></svg></div>
+                                      <div class="text-block">
+                                            <div class="name">قصر العظم</div>
+                                            <div class="info">دمشق</div>
+                                            <div class="text">هو قصر شُيد في القرن الثامن عشر الميلادي، ويقع في النهاية الشمالية لسوق البزورية بدمشق القديمة، سوريا، وعلى شماله يقع الجامع الأموي الكبير، وتبلغ مساحته الاجمالية 6400 متر مربع، وهو من بناء والي دمشق الوزير أسعد العظم عام 1749م، ويعد القصر نموذجاً للفن المعماري الإسلامي المتطور</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4 col-md-4">
+                                    <div class="service-block" style="visibility: visible;">
+                                      <div class="ico fa fa- highlight"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: #780C28;transform: ;msFilter:;"><path d="M21 8V6H3v14H2v2h6v-7c0-.163.046-4 4-4 3.821 0 3.993 3.602 4 4v7h6v-2h-1V8zM2 2h20v2H2z"></path></svg></div>
+                                      <div class="text-block">
+                                            <div class="name">قلعة صلاح الدين الأيوبي</div>
+                                            <div class="info">اللاذقية</div>
+                                            <div class="text">إحدى قلاع جبال الساحل السوري في محافظة اللاذقية في سوريا. تتربع فوق قمة مرتفعة وتحيط بها الغابات والمناظر الرائعة وكانت تسمى لزمن غير قصير بقلعة صهيون أو السون، وأصبحت اليوم تحمل اسم قلعة صلاح الدين الأيوبي تيمناً بذكرى القائد الإسلامي الكردي صلاح الدين الأيوبي. وفي عام 2006 مـ سجلت القلعة على لائحة التراث العالمي إلى جانب قلعة الحصن</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4 col-md-4">
+                                    <div class="service-block" style="visibility: visible;">
+                                      <div class="ico fa fa- highlight"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: #780C28;transform: ;msFilter:;"><path d="M8 22h1v-6.995c.006-.502.177-3.005 3-3.005s2.994 2.503 3 3v7h7v-2h-1V4h1V2H2v2h1v16H2v2h6zM19 4v2H5V4h14zM5 8h14v12h-2v-5c0-1.729-1.045-5-5-5s-5 3.271-5 5v5H5V8z"></path></svg></div>
+                                      <div class="text-block">
+                                            <div class="name">بصرى</div>
+                                            <div class="info">درعا</div>
+                                            <div class="text">هي مدينة تاريخية تتبع محافظة درعا في الجمهورية العربية السورية، تبعد 40 كم عن مركز مدينة درعا وحوالي 140 كم عن دمشق وترتفع عن سطح البحر حوالي 850 متراً. كانت بصرى عاصمة دينية ومركزاً تجارياً هاماً وممراً على طريق الحرير الذي يمتد إلى الصين ومنارة للحضارة في عدة عصور تعود لآلاف السنين</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4 col-md-4">
+                                    <div class="service-block" style="visibility: visible;">
+                                      <div class="ico fa fa- highlight"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: #780C28;transform: ;msFilter:;"><path d="M21 8V6H3v14H2v2h6v-7c0-.163.046-4 4-4 3.821 0 3.993 3.602 4 4v7h6v-2h-1V8zM2 2h20v2H2z"></path></svg></div>
+                                      <div class="text-block">
+                                            <div class="name">مسرح تدمر</div>
+                                            <div class="info">تدمر</div>
+                                            <div class="text">هو مسرح أثري يقع في مدينة تدمر السورية، ويعتقد علماء الآثار بأنه بني في النصف الأول من القرن الثاني الميلادي، وقد أعيد بناؤه بعد انهياره عام 273م عندما سيطر الرومان على المدينة، وقد كان مدفوناً تحت الرمل حتى عام 1950، ثم جرت أعمال التنقيب والترميم عام 1952</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>                    
+
+  <!-- End News -->
+
+  <!-- Start Footer -->
+  <footer>
+    <footer class="footer" id="about">
+      <div class="container-fluid">
+          <div class="row foot">
+              <div class="col-lg-4 footer-section">
+                  <div class="footer-logo">سورية</div>
+                  <p class="footer-about">8/12/2024 <span style="font-family: Aref Ruqaa, serif;">تاريخ تحرير سورية</span></p>
+                  <div class="social-links">
+                      <a href="https://www.facebook.com/share/1GDdREwGwz/" class="social-icon"><i class="fa fa-facebook-square"></i></a>
+                      <a href="https://www.instagram.com/its.majdmousa?igsh=MWJkb3g3d3AxZm41ZQ==" class="social-icon"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                      <a href="https://www.linkedin.com/in/majd-mousa-20ba662a4?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-icon"><i class="fa fa-linkedin-square"></i></a>
+                      <a href="http://t.me/Info_Majd" class="social-icon"><i class="fa fa-telegram"></i></a>
+                  </div>
+              </div>
+  
+              <div class="col-lg-2 col-md-6 footer-section">
+                  <h5>روابط سريعة</h5>
+                  <ul class="footer-links">
+                      <li><a href="#nav">الرئيسية</a></li>
+                      <li><a href="#">الصور</a></li>
+                      <li><a href="#dam">المحافظات</a></li>
+                      <li><a href="#">معلومات</a></li>
+                      <li><a href="#">معالم سوريا</a></li>
+                      <li><a href="#">حول</a></li>
+                  </ul>
+              </div>
+  
+              <div class="col-lg-2 col-md-6 footer-section">
+                  <h5>الدعم</h5>
+                  <ul class="footer-links">
+                      <li><a href="#">مركز المساعدة</a></li>
+                      <li><a href="#">سياسة الخصوصية</a></li>
+                      <li><a href="#">شروط الخدمة</a></li>
+                      <li><a href="http://t.me/Info_Majd">التواصل مع الدعم</a></li>
+                  </ul>
+              </div>
+          </div>
+  
+          <div class="footer-bottom">
+              <p>© 2025 SYRIA . This Website is made by <strong>MAJD MOUSA</strong>.</p>
+          </div>
+      </div>
+  </footer>
+  </footer>
+  <!-- End Footer -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+</body>
+</html>
